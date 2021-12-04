@@ -7,7 +7,7 @@
             android:defaultValue="false"
             android:key="notifications"
             android:title="@string/notifications"
-            android:icon="@drawable/ic_baseline_notifications_24"/>
+            android:icon="@drawable/ic_notifications_black_24dp"/>
         <CheckBoxPreference
             app:dependency="notifications"
             android:defaultValue="false"
