@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.edw88.baricharafriends">
-
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -14,26 +13,21 @@
         <activity
             android:name=".drawer.DrawerActivity"
             android:exported="true"
-            android:label="@string/title_activity_drawer"
             android:theme="@style/Theme.Proyecto.NoActionBar" >
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".botton.BottonActivity"
             android:exported="true"
             android:label="@string/title_activity_botton">
-
         </activity>
         <activity
             android:name=".main.MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
     </application>
-
 </manifest>
