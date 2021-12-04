@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/navigation_list"
         android:name="com.edw88.baricharafriends.list.ListFragment"
-        android:label="ListFragment"
+        android:label="@string/title_list"
         tools:layout="@layout/fragment_list">
         <action
             android:id="@+id/action_listFragment_to_detailFragment"
@@ -20,15 +20,23 @@
     <fragment
         android:id="@+id/navigation_detail"
         android:name="com.edw88.baricharafriends.detail.DetailFragment"
-        android:label="DetailFragment"
+        android:label="@string/title_detail"
         tools:layout="@layout/fragment_detail"
         >
         <argument
             android:name="sitio"
             app:argType="com.edw88.baricharafriends.model.SitiosItem" />
+        <action
+            android:id="@+id/action_navigation_detail_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
     </fragment>
     <fragment
         android:id="@+id/navigation_preference"
         android:name="com.edw88.baricharafriends.preference.SettingsFragment"
-        android:label="SettingsFragment" />
+        android:label="@string/title_preference" />
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.edw88.baricharafriends.maps.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" />
 </navigation>

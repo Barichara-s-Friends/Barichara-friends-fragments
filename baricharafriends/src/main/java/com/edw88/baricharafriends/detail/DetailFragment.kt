@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.edw88.baricharafriends.databinding.FragmentDetailBinding
 import com.edw88.baricharafriends.main.MainActivity
@@ -17,14 +18,13 @@ class DetailFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        (activity as MainActivity?)?.showIcon()
+        // (activity as MainActivity?)?.showIcon() NO SE USA EN DRAWERACTIVITY
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         detailBinding = FragmentDetailBinding.inflate(inflater, container, false)
 
         return detailBinding.root
@@ -39,11 +39,14 @@ class DetailFragment : Fragment() {
             cementerioTextView.text = sitios.nombre
             cementerioDescripcionTextView.text = sitios.descripcionlarga
             com.squareup.picasso.Picasso.get().load(sitios.urlFoto).into(imageView5)
+
+            mapButton.setOnClickListener{
+                findNavController().navigate(DetailFragmentDirections.actionNavigationDetailToMapsFragment())
+            }
         }
 
     }
 }
-
 
 
 
