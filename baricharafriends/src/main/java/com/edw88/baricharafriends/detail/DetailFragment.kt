@@ -17,14 +17,13 @@ class DetailFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        (activity as MainActivity?)?.showIcon()
+        // (activity as MainActivity?)?.showIcon() NO SE USA EN DRAWERACTIVITY
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         detailBinding = FragmentDetailBinding.inflate(inflater, container, false)
 
         return detailBinding.root
@@ -43,7 +42,6 @@ class DetailFragment : Fragment() {
 
     }
 }
-
 
 
 

@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/navigation_list"
         android:name="com.edw88.baricharafriends.list.ListFragment"
-        android:label="ListFragment"
+        android:label="@string/title_list"
         tools:layout="@layout/fragment_list">
         <action
             android:id="@+id/action_listFragment_to_detailFragment"
@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/navigation_detail"
         android:name="com.edw88.baricharafriends.detail.DetailFragment"
-        android:label="DetailFragment"
+        android:label="@string/title_detail"
         tools:layout="@layout/fragment_detail"
         >
         <argument
@@ -30,5 +30,5 @@
     <fragment
         android:id="@+id/navigation_preference"
         android:name="com.edw88.baricharafriends.preference.SettingsFragment"
-        android:label="SettingsFragment" />
+        android:label="@string/title_preference" />
 </navigation>
