@@ -29,8 +29,15 @@ class PoiAdapter(
         holder.bind(poi)
     }
 
-
     override fun getItemCount(): Int = puntosList.size
+
+    fun appendItems(newItems: ArrayList<SitiosItem>) {
+        puntosList.clear()
+        puntosList.addAll(newItems)
+        notifyDataSetChanged()
+
+    }
+
 
     class PoiViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
