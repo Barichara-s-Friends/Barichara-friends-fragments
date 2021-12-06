@@ -14,5 +14,9 @@ data class SitiosItem(
     val urlFoto: String,
     @SerializedName("descripcionLarga")
     val descripcionlarga : String,
+    @SerializedName("latitud")
+    val latitud : String,
+    @SerializedName("longitud")
+    val longitud : String
 
 ) : Serializable
