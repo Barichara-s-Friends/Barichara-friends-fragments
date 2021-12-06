@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.navArgs
 import com.edw88.baricharafriends.R
 
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -16,6 +17,7 @@ import com.google.android.gms.maps.model.MarkerOptions
 
 class MapsFragment : Fragment() {
 
+    private val args : MapsFragmentArgs by navArgs()
     private val callback = OnMapReadyCallback { googleMap ->
         /**
          * Manipulates the map once available.
@@ -26,17 +28,18 @@ class MapsFragment : Fragment() {
          * install it inside the SupportMapFragment. This method will only be triggered once the
          * user has installed Google Play services and returned to the app.
          */
-        val sydney = LatLng(-34.0, 151.0)
-        googleMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
 
-        val cementerio = LatLng(6.6362206, -73.2259249)
+        val sitio = args.sitio
+
+        val posSitio = LatLng(sitio.latitud, sitio.longitud)
         googleMap.addMarker(
             MarkerOptions()
-                .position(cementerio)
-                .title("Este es el cementerio de BARICHARA")
-                .snippet("Santander"))
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(cementerio,21F))
+            .position(posSitio)
+            .title(sitio.nombre)
+                .snippet("Calificación " + sitio.calificacion))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(posSitio,18F))
+
+
     }
 
     override fun onCreateView(
@@ -49,7 +52,10 @@ class MapsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
         mapFragment?.getMapAsync(callback)
+
+
     }
 }
