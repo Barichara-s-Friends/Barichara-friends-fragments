@@ -1,4 +1,4 @@
-package com.edw88.baricharafriends.main
+package com.edw88.baricharafriends.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,7 +9,7 @@ import androidx.appcompat.app.ActionBar
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.edw88.baricharafriends.R
-import com.edw88.baricharafriends.preference.SettingsFragment
+import com.edw88.baricharafriends.ui.preference.SettingsFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -32,16 +32,16 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".drawer.DrawerActivity"
+            android:name="com.edw88.baricharafriends.ui.drawer.DrawerActivity"
             android:exported="true"
             android:theme="@style/Theme.Proyecto.NoActionBar" />
         <activity
-            android:name=".botton.BottonActivity"
+            android:name="com.edw88.baricharafriends.ui.botton.BottonActivity"
             android:exported="true"
             android:label="@string/title_activity_botton">
         </activity>
         <activity
-            android:name=".main.MainActivity"
+            android:name="com.edw88.baricharafriends.ui.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

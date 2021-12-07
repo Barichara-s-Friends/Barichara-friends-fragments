@@ -1,11 +1,10 @@
-package com.edw88.baricharafriends.preference
+package com.edw88.baricharafriends.ui.preference
 
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import androidx.preference.PreferenceFragmentCompat
 import com.edw88.baricharafriends.R
-import com.edw88.baricharafriends.main.MainActivity
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
