@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@color/cardview_shadow_start_color"
-    android:backgroundTintMode="src_in"
+    android:background="@color/ic_launcher_background"
+    android:backgroundTint="@color/material_on_background_emphasis_high_type"
+    android:backgroundTintMode="add"
     tools:context="detail.DetailFragment">
 
     <TextView
@@ -13,16 +14,15 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:text="@string/cementerio"
         android:textAlignment="center"
-        android:textColor="#090808"
+        android:textColor="@color/primero"
         android:textSize="24sp"
         android:theme="@style/Barichara"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -55,10 +55,10 @@
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
                     android:background="@drawable/border_radius"
+                    android:contentDescription="@null"
                     android:cropToPadding="true"
                     android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/cementerio_barichara"
-                    android:contentDescription="@null" />
+                    app:srcCompat="@drawable/cementerio_barichara" />
 
                 <TextView
                     android:id="@+id/cementerio_descripcion_text_view"
@@ -70,7 +70,8 @@
                     android:justificationMode="inter_word"
                     android:text="@string/cementerio_descripcion"
                     android:textAllCaps="false"
-                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
                     android:theme="@style/Barichara"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -80,8 +81,8 @@
                     android:id="@+id/mapButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_map"
-                    android:contentDescription="@null" />
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_map" />
 
             </LinearLayout>
         </ScrollView>

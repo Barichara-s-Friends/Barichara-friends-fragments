@@ -37,7 +37,7 @@ class MapsFragment : Fragment() {
             .position(posSitio)
             .title(sitio.nombre)
                 .snippet("Calificación " + sitio.calificacion))
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(posSitio,18F))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(posSitio,17F))
 
 
     }
