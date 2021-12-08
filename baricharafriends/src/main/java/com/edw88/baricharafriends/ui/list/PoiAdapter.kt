@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.edw88.baricharafriends.R
 import com.edw88.baricharafriends.model.SitiosItem
 import com.squareup.picasso.Picasso
+import com.squareup.picasso.Transformation
 
 
 class PoiAdapter(
@@ -51,7 +52,13 @@ class PoiAdapter(
             nombreTextView.text = sitios.nombre
             descripcionTextView.text = sitios.descripcion
             calificacionTextView.text = sitios.calificacion
-            Picasso.get().load(sitios.urlFoto).into(imagenImageView)
+
+ //           Transformation transformation = RoundedTransformationBuilder()
+//                .bo
+
+            Picasso.get()
+                .load(sitios.urlFoto)
+                .into(imagenImageView)
         }
     }
 }

@@ -12,7 +12,9 @@
         tools:layout="@layout/fragment_list">
         <action
             android:id="@+id/action_listFragment_to_detailFragment"
-            app:destination="@id/navigation_detail" />
+            app:destination="@id/navigation_detail"
+            app:enterAnim="@anim/move"
+            app:popExitAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_listFragment_to_settingsFragment"
             app:destination="@id/navigation_preference" />
@@ -28,7 +30,8 @@
             app:argType="com.edw88.baricharafriends.model.SitiosItem" />
         <action
             android:id="@+id/action_navigation_detail_to_mapsFragment"
-            app:destination="@id/mapsFragment" />
+            app:destination="@id/mapsFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
     </fragment>
     <fragment
         android:id="@+id/navigation_preference"
