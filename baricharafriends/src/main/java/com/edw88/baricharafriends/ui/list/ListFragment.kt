@@ -1,4 +1,4 @@
-package com.edw88.baricharafriends.list
+package com.edw88.baricharafriends.ui.list
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -38,10 +38,13 @@ class ListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (activity as MainActivity?)?.hideIcon()
-        listViewModel.loadMockJson(context?.assets?.open("poi.json"))
+
+//        listViewModel.loadMockJson(context?.assets?.open("poi.json"))
+
+        listViewModel.getSitiosFromServer()
 
         listViewModel.onListpoiLoaded.observe(viewLifecycleOwner,{ result ->
-            onListpoidLoadedSubscribe(result)
+            onListpoiLoadedSubscribe(result)
         })
 
         poiAdapter = PoiAdapter(listPoi, onItemClicked = { this.onPoiClicked(it) })
@@ -54,7 +57,7 @@ class ListFragment : Fragment() {
 
     }
 
-    private fun onListpoidLoadedSubscribe(result: ArrayList<SitiosItem>?) {
+    private fun onListpoiLoadedSubscribe(result: ArrayList<SitiosItem>?) {
         result?.let { listPoi ->
             poiAdapter.appendItems(listPoi)
             /*

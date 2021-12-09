@@ -11,13 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyecto">
         <activity
-            android:name=".drawer.DrawerActivity"
+            android:name="com.edw88.baricharafriends.ui.drawer.DrawerActivity"
             android:exported="true"
             android:theme="@style/Theme.Proyecto.NoActionBar" >
 
         </activity>
         <activity
-            android:name=".botton.BottonActivity"
+            android:name="com.edw88.baricharafriends.ui.botton.BottonActivity"
             android:exported="true"
             android:label="@string/title_activity_botton">
         </activity>

@@ -1,4 +1,4 @@
-package com.edw88.baricharafriends.botton
+package com.edw88.baricharafriends.ui.botton
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView

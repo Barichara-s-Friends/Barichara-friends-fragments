@@ -1,4 +1,4 @@
-package com.edw88.baricharafriends.detail
+package com.edw88.baricharafriends.ui.detail
 
 import androidx.lifecycle.ViewModel
 

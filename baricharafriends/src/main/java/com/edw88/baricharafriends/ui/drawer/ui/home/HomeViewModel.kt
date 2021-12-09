@@ -1,4 +1,4 @@
-package com.edw88.baricharafriends.drawer.ui.home
+package com.edw88.baricharafriends.ui.drawer.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

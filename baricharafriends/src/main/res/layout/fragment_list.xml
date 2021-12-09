@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/primero"
     android:backgroundTint="@color/ic_launcher_background"
-    tools:context="list.ListFragment">
+    tools:context=".ui.list.ListFragment">
 
 
     <TextView
