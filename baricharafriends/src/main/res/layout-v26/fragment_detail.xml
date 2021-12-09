@@ -64,7 +64,7 @@
                 <TextView
                     android:id="@+id/cementerio_descripcion_text_view"
                     android:layout_width="wrap_content"
-                    android:layout_height="700dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="36dp"
                     android:layout_marginEnd="8dp"
