@@ -50,7 +50,7 @@ class PoiAdapter(
 
             nombreTextView.text = sitios.nombre
             descripcionTextView.text = sitios.descripcion
-            calificacionTextView.text = sitios.calificacion
+            calificacionTextView.text = sitios.calificacion.toString()
             Picasso.get().load(sitios.urlFoto).into(imagenImageView)
         }
     }
