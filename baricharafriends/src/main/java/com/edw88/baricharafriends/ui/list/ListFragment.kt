@@ -1,4 +1,4 @@
-package com.edw88.baricharafriends.list
+package com.edw88.baricharafriends.ui.list
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.edw88.baricharafriends.databinding.FragmentListBinding
-import com.edw88.baricharafriends.main.MainActivity
+import com.edw88.baricharafriends.ui.main.MainActivity
 import com.edw88.baricharafriends.model.SitiosItem
 
 
@@ -38,7 +38,9 @@ class ListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (activity as MainActivity?)?.hideIcon()
-        listViewModel.loadMockJson(context?.assets?.open("poi.json"))
+      //  listViewModel.loadMockJson(context?.assets?.open("poi.json"))
+
+        listViewModel.getSitioFromServer()
 
         listViewModel.onListpoiLoaded.observe(viewLifecycleOwner,{ result ->
             onListpoidLoadedSubscribe(result)

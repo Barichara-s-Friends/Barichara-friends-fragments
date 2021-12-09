@@ -1,4 +1,4 @@
-package com.edw88.baricharafriends.detail
+package com.edw88.baricharafriends.ui.detail
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,10 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
 import com.edw88.baricharafriends.databinding.FragmentDetailBinding
-import com.edw88.baricharafriends.main.MainActivity
+import com.edw88.baricharafriends.ui.main.MainActivity
 
 
 class DetailFragment : Fragment() {
