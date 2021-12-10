@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1089174659976",
+    "project_id": "baricharafriends",
+    "storage_bucket": "baricharafriends.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089174659976:android:ed2422f6fee6868265903d",
+        "android_client_info": {
+          "package_name": "com.edw88.baricharafriends"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1089174659976-13u2oqskghih5cgiaa0nu6o310ml4ido.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.edw88.baricharafriends",
+            "certificate_hash": "17aca9479ba831cd45a58606b67a41390d83e204"
+          }
+        },
+        {
+          "client_id": "1089174659976-guru95hq3f0p57e8u7amod9u4ka555br.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkhCCeV5lFp2L3sCh99H3Pi6pgj3pwaR8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1089174659976-guru95hq3f0p57e8u7amod9u4ka555br.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -8,8 +8,12 @@ import android.view.MenuItem
 import androidx.appcompat.app.ActionBar
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import androidx.navigation.findNavController
 import com.edw88.baricharafriends.R
 import com.edw88.baricharafriends.ui.preference.SettingsFragment
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,13 +34,19 @@ class MainActivity : AppCompatActivity() {
 
         return when (item.itemId){
             R.id.menu_preferences ->{
-                val fragmentSettings = SettingsFragment()
-                ft.replace(R.id.fragmentContainerView, fragmentSettings).commit()
+                val settingsFragment = SettingsFragment()
+                ft.replace(R.id.fragmentContainerView, settingsFragment).commit()
                 ft.addToBackStack(null)
                 true
             }
             android.R.id.home ->{
                 onBackPressed()
+                true
+            }
+            R.id.menu_sing_out ->{
+                val auth: FirebaseAuth = Firebase.auth
+                auth.signOut()
+
                 true
             }
             else -> {return true}
