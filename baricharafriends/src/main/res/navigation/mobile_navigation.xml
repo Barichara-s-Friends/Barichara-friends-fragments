@@ -26,9 +26,21 @@
         <argument
             android:name="sitio"
             app:argType="com.edw88.baricharafriends.model.SitiosItem" />
+        <action
+            android:id="@+id/action_navigation_detail_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
     </fragment>
     <fragment
         android:id="@+id/navigation_preference"
         android:name="com.edw88.baricharafriends.ui.preference.SettingsFragment"
         android:label="@string/title_preference" />
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.edw88.baricharafriends.maps.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
+        <argument
+            android:name="sitio"
+            app:argType="com.edw88.baricharafriends.model.SitiosItem" />
+    </fragment>
 </navigation>
