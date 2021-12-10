@@ -4,91 +4,146 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/ic_launcher_background"
-    android:backgroundTint="@color/material_on_background_emphasis_high_type"
+    android:background="@color/black"
+    android:backgroundTint="#101010"
     android:backgroundTintMode="add"
     tools:context="detail.DetailFragment">
     tools:context=".ui.detail.DetailFragment">
 
-    <TextView
-        android:id="@+id/cementerio_text_view"
+
+    <androidx.cardview.widget.CardView
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="120dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="@string/cementerio"
-        android:textAlignment="center"
-        android:textColor="@color/primero"
-        android:textSize="24sp"
-        android:theme="@style/Barichara"
+        app:cardBackgroundColor="@color/tercero"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:cardMaxElevation="24dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/black"
+            android:backgroundTint="@color/primero"
+            android:backgroundTintMode="multiply">
+
+
+            <TextView
+                android:id="@+id/cementerio_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/cementerio"
+                android:textAlignment="center"
+                android:textColor="@color/primero"
+                android:textSize="24sp"
+                android:theme="@style/Barichara"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_marginStart="16dp"
         android:layout_marginTop="150dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="50dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ScrollView
+            android:id="@+id/scrollView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="1000dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:gravity="center"
                 android:orientation="vertical">
 
 
-                <ImageView
-                    android:id="@+id/imageView5"
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:adjustViewBounds="true"
-                    android:background="@drawable/border_radius"
-                    android:contentDescription="@null"
-                    android:cropToPadding="true"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/cementerio_barichara" />
+                    android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/cementerio_descripcion_text_view"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginTop="36dp"
-                    android:layout_marginEnd="8dp"
-                    android:justificationMode="inter_word"
-                    android:text="@string/cementerio_descripcion"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="18dp"
-                    android:theme="@style/Barichara"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
-                <ImageButton
-                    android:id="@+id/mapButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@null"
-                    android:src="@drawable/ic_map" />
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="48dp"
+                        android:layout_marginEnd="8dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/border_radius"
+                        android:contentDescription="@null"
+                        android:cropToPadding="true"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/cementerio_barichara" />
+
+                    <TextView
+                        android:id="@+id/cementerio_descripcion_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginBottom="8dp"
+                        android:justificationMode="inter_word"
+                        android:text="@string/cementerio_descripcion"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:theme="@style/Barichara"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+                        app:layout_constraintVertical_bias="1.0" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </LinearLayout>
         </ScrollView>
 
     </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/mapButton"
+        style="@android:style/Widget.Holo.Light.ActionMode.Inverse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primero"
+        android:contentDescription="@null"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/ic_baseline_maps_ugc_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

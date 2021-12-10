@@ -5,15 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/ic_launcher_background"
-    android:foregroundTint="#090909">
+    android:foregroundTint="@color/primero">
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
-        app:cardBackgroundColor="@color/tercero"
+        android:layout_marginBottom="4dp"
+        app:cardBackgroundColor="@color/segundo"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
         app:cardMaxElevation="24dp"
@@ -34,16 +35,12 @@
                 android:id="@+id/imagen_card_image_view"
                 android:layout_width="100dp"
                 android:layout_height="76dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="295dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/border_radius"
                 android:contentDescription="@string/imagelist"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nombre_card_text_view"
                 app:srcCompat="@drawable/cementerio_barichara" />
 
             <TextView
@@ -52,8 +49,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/cementerio"
                 android:justificationMode="inter_word"
+                android:text="@string/cementerio"
                 android:textColor="@color/primero"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
