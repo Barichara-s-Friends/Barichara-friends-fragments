@@ -5,6 +5,6 @@ import retrofit2.http.GET
 
 interface ApiService {
 
-    @GET("Barichara-s-Friends/Barichara-friends-fragments/sitios")
+    @GET("Barichara-s-Friends/Barichara-friends-fragments/poi")
     suspend fun getSitios(): Sitios
 }
