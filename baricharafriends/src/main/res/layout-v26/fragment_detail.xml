@@ -104,12 +104,12 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@drawable/cementerio_barichara" />
 
+
                     <TextView
                         android:id="@+id/cementerio_descripcion_text_view"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginTop="32dp"
                         android:layout_marginBottom="8dp"
                         android:justificationMode="inter_word"
                         android:text="@string/cementerio_descripcion"
@@ -120,8 +120,22 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+                        app:layout_constraintTop_toBottomOf="@+id/ratingBar"
                         app:layout_constraintVertical_bias="1.0" />
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/purple_500"
+                        android:foregroundTint="@color/design_default_color_error"
+                        android:indeterminateTint="@color/purple_700"
+                        android:progressBackgroundTint="@color/ic_launcher_background"
+                        android:progressTint="@color/primero"
+                        android:secondaryProgressTint="@android:color/holo_green_dark"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
