@@ -31,4 +31,10 @@ class ListViewModel : ViewModel() {
         listpoiLoad.value = gson.fromJson(poiString, Sitios::class.java)
 
     }
+
+    fun getSitioFromFirebase() {
+        GlobalScope.launch(Dispatchers.IO){
+            listpoiLoad.postValue(repository.getSitioFromFirebase())
+        }
+    }
 }

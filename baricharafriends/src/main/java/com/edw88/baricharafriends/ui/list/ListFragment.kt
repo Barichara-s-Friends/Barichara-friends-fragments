@@ -39,8 +39,10 @@ class ListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         (activity as MainActivity?)?.hideIcon()
       //  listViewModel.loadMockJson(context?.assets?.open("poi.json"))
-
         listViewModel.getSitioFromServer()
+        listBinding.progressBar.visibility = View.VISIBLE
+
+       // listViewModel.getSitioFromFirebase()
 
         listViewModel.onListpoiLoaded.observe(viewLifecycleOwner,{ result ->
             onListpoidLoadedSubscribe(result)
@@ -59,6 +61,7 @@ class ListFragment : Fragment() {
     private fun onListpoidLoadedSubscribe(result: ArrayList<SitiosItem>?) {
         result?.let { listPoi ->
             poiAdapter.appendItems(listPoi)
+            listBinding.progressBar.visibility = View.INVISIBLE
             /*
             this.listPoi = listPoi
             poiAdapter.notifyDataSetChanged()*/

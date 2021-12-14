@@ -18,4 +18,6 @@ data class SitiosItem(
     val latitud : Double,
     @SerializedName("longitud")
     val longitud : Double
-) : Serializable
+) : Serializable {
+    constructor() : this (0.0, "", "","", "", 0.0, 0.0)
+}

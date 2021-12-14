@@ -34,7 +34,7 @@
                 android:id="@+id/imagen_card_image_view"
                 android:layout_width="100dp"
                 android:layout_height="76dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="295dp"
                 android:layout_marginBottom="16dp"

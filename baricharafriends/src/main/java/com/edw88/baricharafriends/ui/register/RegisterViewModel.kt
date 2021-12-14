@@ -4,31 +4,37 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.edw88.baricharafriends.data.RegisterRepository
+import com.edw88.baricharafriends.model.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class RegisterViewModel : ViewModel() {
 
-    private lateinit var auth: FirebaseAuth
+
 
     private var userCreate : MutableLiveData<Boolean> = MutableLiveData()
     val onUserCreated: LiveData<Boolean> = userCreate
 
+    private val registerRepository = RegisterRepository()
+
     fun register(email: String, password: String) {
-        auth = Firebase.auth
+       GlobalScope.launch(Dispatchers.IO){
+           val result = registerRepository.createUser(email,password)
+       }
+    }
 
-        auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener() { task ->
-                if (task.isSuccessful) {
-                    userCreate.value = true
-                    Log.d("Registro", "createUserWithEmail:success")
+    fun createUserAccount(email: String, username: String) {
+        GlobalScope.launch(Dispatchers.IO){
+            val result = registerRepository.createUserInDatabase(email, username)
+        }
 
-                } else {
-                    userCreate.value = false
-                    Log.w("Registro", "createUserWithEmail:failure", task.exception)
-                }
-            }
+
 
     }
 
