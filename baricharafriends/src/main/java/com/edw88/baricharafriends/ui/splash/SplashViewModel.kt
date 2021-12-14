@@ -9,19 +9,18 @@ import com.google.firebase.ktx.Firebase
 
 class SplashViewModel : ViewModel() {
 
-    private lateinit var auth: FirebaseAuth
+    private  lateinit var auth: FirebaseAuth
 
-    private var userLogin : MutableLiveData<Boolean> = MutableLiveData()
-    val onUserLoggedIn: LiveData<Boolean> = userLogin
+    private var userLogin: MutableLiveData<Boolean> = MutableLiveData()
+    val onUserLoggedInt: LiveData<Boolean> = userLogin
 
     fun checkUserConnected(){
         auth = Firebase.auth
 
         val currentUser = auth.currentUser
-        if(currentUser != null) {
+        if(currentUser !=null){
             userLogin.value = true
         }else
             userLogin.value = false
-
     }
 }

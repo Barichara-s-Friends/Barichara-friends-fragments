@@ -9,6 +9,7 @@ import androidx.appcompat.app.ActionBar
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.edw88.baricharafriends.R
+import com.edw88.baricharafriends.ui.login.LoginFragment
 import com.edw88.baricharafriends.ui.preference.SettingsFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -16,6 +17,8 @@ import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        Thread.sleep(2000)
+        setTheme(R.style.Apptheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
@@ -27,7 +30,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
         val fm : FragmentManager = supportFragmentManager
         val ft : FragmentTransaction = fm.beginTransaction()
 
@@ -45,9 +47,13 @@ class MainActivity : AppCompatActivity() {
             R.id.menu_sing_out ->{
                 val auth: FirebaseAuth = Firebase.auth
                 auth.signOut()
+                val loginFragment = LoginFragment()
+                ft.replace(R.id.fragmentContainerView, loginFragment).commit()
                 true
             }
-            else -> {return true}
+            else -> {
+                return true
+            }
         }
     }
 

@@ -23,26 +23,16 @@ class LoginFragment : Fragment() {
     ): View {
         loginBinding = LoginFragmentBinding.inflate(inflater, container, false)
         loginViewModel = ViewModelProvider(this)[LoginViewModel::class.java]
+        return loginBinding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         loginViewModel.onUserLoggedIn.observe(viewLifecycleOwner,{result ->
             onUserLoggedInSubscribe(result)
         })
 
-        return loginBinding.root
-    }
-
-    private fun onUserLoggedInSubscribe(result: Boolean?) {
-        result?.let { isLoggedIn ->
-            if(isLoggedIn){
-                findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToNavigationList())
-            }else
-                Toast.makeText(context,"Error en el inicio de sesión", Toast.LENGTH_SHORT).show()
-        }
-
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
         with(loginBinding){
             loginButton.setOnClickListener{
 
@@ -54,13 +44,19 @@ class LoginFragment : Fragment() {
                 else
                     if(!isEmailValid(email))
                         Toast.makeText(context, "Correo ingresado incorrectamente", Toast.LENGTH_SHORT).show()
-                else
-                loginViewModel.login(email, password)
+                    else
+                        loginViewModel.login(email, password)
             }
 
             regsiterTextView.setOnClickListener {
                 findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegisterFragment())
             }
         }
+    }
+
+    private fun onUserLoggedInSubscribe(result: String) {
+        Toast.makeText(context, result, Toast.LENGTH_SHORT).show()
+        if (result.equals("Bienvenido"))
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToNavigationList())
     }
 }

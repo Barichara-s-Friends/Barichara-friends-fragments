@@ -24,7 +24,7 @@ class SplashFragment : Fragment(){
        splashBinding = FragmentSplashBinding.inflate(inflater, container, false)
        splashViewModel = ViewModelProvider(this)[SplashViewModel::class.java]
 
-       splashViewModel.onUserLoggedIn.observe(viewLifecycleOwner,{ result ->
+       splashViewModel.onUserLoggedInt.observe(viewLifecycleOwner,{ result ->
            onUserLoggedInSubscribe(result)
        })
 
@@ -43,13 +43,12 @@ class SplashFragment : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         Thread.sleep(2000)
         checkUserConnected()
     }
 
     private fun checkUserConnected() {
-        splashViewModel.checkUserConnected()
+
     }
 
 

@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.edw88.baricharafriends.databinding.FragmentListBinding
 import com.edw88.baricharafriends.ui.main.MainActivity
 import com.edw88.baricharafriends.model.SitiosItem
-
+import com.edw88.baricharafriends.ui.splash.SplashFragmentDirections
 
 class ListFragment : Fragment() {
 
@@ -20,35 +20,38 @@ class ListFragment : Fragment() {
     private lateinit var poiAdapter: PoiAdapter
     private var listPoi: ArrayList<SitiosItem> = arrayListOf()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         listBinding = FragmentListBinding.inflate(inflater, container, false)
         listViewModel = ViewModelProvider(this)[ListViewModel::class.java]
-
         return listBinding.root
+    }
+
+    override fun onStart() {
+        super.onStart()
+        listViewModel.checkUserConnected()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (activity as MainActivity?)?.hideIcon()
-      //  listViewModel.loadMockJson(context?.assets?.open("poi.json"))
-        listViewModel.getSitioFromServer()
-        listBinding.progressBar.visibility = View.VISIBLE
 
-       // listViewModel.getSitioFromFirebase()
+      //  listViewModel.loadMockJson(context?.assets?.open("poi.json"))
+      //  listViewModel.getSitioFromServer()
+        listBinding.progressBar.visibility = View.VISIBLE
+        listViewModel.getSitioFromFirebase()
+        listViewModel.onUserLoggedIn.observe(viewLifecycleOwner, { result ->
+            onUserLoogedInSubscribe(result)
+        })
 
         listViewModel.onListpoiLoaded.observe(viewLifecycleOwner,{ result ->
             onListpoidLoadedSubscribe(result)
         })
 
-        poiAdapter = PoiAdapter(listPoi, onItemClicked = { this.onPoiClicked(it) })
+        poiAdapter =
+            PoiAdapter(listPoi, onItemClicked = { this.onPoiClicked(it) })
 
         listBinding.poiRecyclerView.apply {
             layoutManager = LinearLayoutManager(context)
@@ -58,20 +61,28 @@ class ListFragment : Fragment() {
 
     }
 
+    private fun onUserLoogedInSubscribe(result: Boolean?) {
+        result?.let { isUserLoggedIn ->
+            if (!isUserLoggedIn)
+                findNavController().navigate(ListFragmentDirections.actionNavigationListToLoginFragment())
+        }
+
+    }
+
     private fun onListpoidLoadedSubscribe(result: ArrayList<SitiosItem>?) {
         result?.let { listPoi ->
             poiAdapter.appendItems(listPoi)
             listBinding.progressBar.visibility = View.INVISIBLE
-            /*
-            this.listPoi = listPoi
-            poiAdapter.notifyDataSetChanged()*/
-
         }
     }
 
     private fun onPoiClicked(sitios: SitiosItem) {
        // findNavController().navigate(ListFragmentDirections.actionListFragmentToSettingsFragment())
-       findNavController().navigate(ListFragmentDirections.actionListFragmentToDetailFragment(sitio = sitios))
+       findNavController().navigate(
+           ListFragmentDirections.actionListFragmentToDetailFragment(
+               sitio = sitios
+           )
+       )
 
     }
 
