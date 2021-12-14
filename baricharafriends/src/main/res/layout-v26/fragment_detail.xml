@@ -155,6 +155,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/primero"
         android:contentDescription="@null"
+        android:foregroundTint="@android:color/holo_green_light"
         android:minWidth="48dp"
         android:minHeight="48dp"
         android:src="@drawable/ic_baseline_maps_ugc_24"

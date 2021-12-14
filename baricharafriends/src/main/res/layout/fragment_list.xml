@@ -66,5 +66,23 @@
         app:layout_constraintVertical_bias="0.0"
         tools:listitem="@layout/card_view_poi_item" />
 
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large.Inverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purple_200"
+        android:foregroundTint="@color/ic_configuration_background"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/primero"
+        android:progressBackgroundTint="@color/primero"
+        android:progressTint="@color/purple_700"
+        android:secondaryProgressTint="@color/design_default_color_error"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
