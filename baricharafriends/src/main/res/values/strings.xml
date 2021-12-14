@@ -67,7 +67,7 @@ El camino se hizo con losas de piedra plana muy abundante en la región, y comie
     <string name="register">Crear cuenta</string>
     <string name="username">Nombre de usuario</string>
     <string name="dont_have_account"><u>¡No tienes cuenta! Registrate</u></string>
-    <string name="sing_out">cerrar_sesion</string>
+    <string name="sing_out">Cerrar sesión</string>
 
 
 </resources>

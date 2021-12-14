@@ -8,7 +8,6 @@ import android.view.MenuItem
 import androidx.appcompat.app.ActionBar
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
-import androidx.navigation.findNavController
 import com.edw88.baricharafriends.R
 import com.edw88.baricharafriends.ui.preference.SettingsFragment
 import com.google.firebase.auth.FirebaseAuth
@@ -46,7 +45,6 @@ class MainActivity : AppCompatActivity() {
             R.id.menu_sing_out ->{
                 val auth: FirebaseAuth = Firebase.auth
                 auth.signOut()
-
                 true
             }
             else -> {return true}

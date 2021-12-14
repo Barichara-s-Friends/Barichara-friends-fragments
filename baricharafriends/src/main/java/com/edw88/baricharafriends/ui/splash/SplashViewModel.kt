@@ -18,9 +18,9 @@ class SplashViewModel : ViewModel() {
         auth = Firebase.auth
 
         val currentUser = auth.currentUser
-        if(currentUser != null)
+        if(currentUser != null) {
             userLogin.value = true
-        else
+        }else
             userLogin.value = false
 
     }
