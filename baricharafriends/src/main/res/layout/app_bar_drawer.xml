@@ -11,6 +11,8 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/primero"
+        android:foregroundTint="@color/segundo"
         android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
 
         <androidx.appcompat.widget.Toolbar
@@ -18,6 +20,8 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
+            android:backgroundTint="@color/primero"
+            android:foregroundTint="@color/segundo"
             app:popupTheme="@style/Theme.MaterialComponents.DayNight.DarkActionBar" />
 
     </com.google.android.material.appbar.AppBarLayout>

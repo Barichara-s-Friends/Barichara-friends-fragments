@@ -47,6 +47,7 @@ class DetailFragment : Fragment() {
             cementerioTextView.text = sitios.nombre
             cementerioDescripcionTextView.text = sitios.descripcionlarga
             com.squareup.picasso.Picasso.get().load(sitios.urlFoto).into(imageView5)
+            ratingBarDetalle.rating = sitios.calificacion
 
             mapButton.setOnClickListener{
                 findNavController().navigate(DetailFragmentDirections.actionNavigationDetailToMapsFragment(sitio = sitios))

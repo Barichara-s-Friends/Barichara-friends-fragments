@@ -1,6 +1,5 @@
 package com.edw88.baricharafriends.ui.list
 
-import android.media.Rating
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -47,7 +46,7 @@ class PoiAdapter(
         private var calificacionTextView: TextView = itemView.findViewById(R.id.calificacion_card_text_view)
         //private var descripcionCardTextView: TextView = itemView.findViewById(R.id.descripcion_card_text_view)
         private var imagenImageView: ImageView = itemView.findViewById(R.id.imagen_card_image_view)
-        private var calificacionRating: RatingBar = itemView.findViewById(R.id.ratingBarCard)
+        private var calificacionRating: RatingBar = itemView.findViewById(R.id.ratingBarCardl)
 
 /*
         val ratingBar: RatingBar = RatingBar(this).apply {

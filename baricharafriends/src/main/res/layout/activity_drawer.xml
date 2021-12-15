@@ -14,7 +14,9 @@
         android:id="@+id/app_bar_drawer"
         layout="@layout/app_bar_drawer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/primero"
+        android:foregroundTint="@color/segundo" />
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
