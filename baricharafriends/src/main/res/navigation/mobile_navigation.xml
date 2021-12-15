@@ -12,10 +12,17 @@
         tools:layout="@layout/fragment_list">
         <action
             android:id="@+id/action_listFragment_to_detailFragment"
-            app:destination="@id/navigation_detail" />
+            app:destination="@id/navigation_detail"
+            app:enterAnim="@anim/move"
+            app:popExitAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_listFragment_to_settingsFragment"
-            app:destination="@id/navigation_preference" />
+            app:destination="@id/navigation_preference"
+            app:enterAnim="@anim/slide_left_down"
+            app:exitAnim="@anim/slide_left_down"
+            app:popEnterAnim="@anim/slide_left_down"
+            app:popExitAnim="@anim/slide_left_down"
+            app:popUpTo="@id/navigation_preference" />
     </fragment>
     <fragment
         android:id="@+id/navigation_detail"
@@ -28,12 +35,36 @@
             app:argType="com.edw88.baricharafriends.model.SitiosItem" />
         <action
             android:id="@+id/action_navigation_detail_to_mapsFragment"
-            app:destination="@id/mapsFragment" />
+            app:destination="@id/mapsFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/action_navigation_detail_to_navigation_preference"
+            app:destination="@id/navigation_preference"
+            app:enterAnim="@anim/slide_left_down"
+            app:exitAnim="@anim/slide_right_up"
+            app:popEnterAnim="@anim/slide_left_down"
+            app:popExitAnim="@anim/slide_right_up"
+            app:popUpTo="@id/navigation_detail" />
     </fragment>
     <fragment
         android:id="@+id/navigation_preference"
         android:name="com.edw88.baricharafriends.preference.SettingsFragment"
-        android:label="@string/title_preference" />
+        android:label="@string/title_preference" >
+        <action
+            android:id="@+id/action_navigation_preference_to_mapsFragment"
+            app:destination="@id/mapsFragment"
+            app:enterAnim="@anim/slide_right_up"
+            app:exitAnim="@anim/slide_right_up"
+            app:popEnterAnim="@anim/slide_right_up"
+            app:popExitAnim="@anim/slide_right_up" />
+        <action
+            android:id="@+id/action_navigation_preference_to_navigation_detail"
+            app:destination="@id/navigation_detail"
+            app:enterAnim="@anim/slide_right_up"
+            app:exitAnim="@anim/slide_right_up"
+            app:popEnterAnim="@anim/slide_right_up"
+            app:popExitAnim="@anim/slide_right_up" />
+    </fragment>
     <fragment
         android:id="@+id/mapsFragment"
         android:name="com.edw88.baricharafriends.maps.MapsFragment"
