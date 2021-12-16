@@ -43,11 +43,14 @@ class DetailFragment : Fragment() {
 
         with(detailBinding) {
             cementerioTextView.text = sitios.nombre
-            cementerioDescripcionTextView.text = sitios.descripcionlarga
+            cementerioDescripcionTextView.text = sitios.descripcionLarga
             com.squareup.picasso.Picasso.get().load(sitios.urlFoto).into(imageView5)
 
             mapButton.setOnClickListener{
                 findNavController().navigate(DetailFragmentDirections.actionNavigationDetailToMapsFragment(sitio = sitios))
+            }
+            favoriteImageView.setOnClickListener{
+                detailViewModel.saveInfavorites(sitios)
             }
         }
 

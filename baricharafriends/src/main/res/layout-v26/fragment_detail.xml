@@ -18,7 +18,7 @@
         android:layout_marginEnd="8dp"
         android:text="@string/cementerio"
         android:textAlignment="center"
-        android:textColor="@color/primero"
+        android:textColor="#4E342E"
         android:textSize="24sp"
         android:theme="@style/Barichara"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
@@ -60,17 +60,25 @@
                     android:scaleType="centerCrop"
                     app:srcCompat="@drawable/cementerio_barichara" />
 
+                <ImageView
+                    android:id="@+id/favorite_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_favorite_border" />
+
                 <TextView
                     android:id="@+id/cementerio_descripcion_text_view"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="354dp"
                     android:layout_gravity="center_vertical"
+                    android:layout_margin="8dp"
                     android:layout_marginTop="36dp"
                     android:layout_marginEnd="8dp"
                     android:justificationMode="inter_word"
                     android:text="@string/cementerio_descripcion"
                     android:textAllCaps="false"
-                    android:textColor="@color/white"
+                    android:textColor="#F4E9E9"
                     android:textSize="18sp"
                     android:theme="@style/Barichara"
                     app:layout_constraintEnd_toEndOf="parent"

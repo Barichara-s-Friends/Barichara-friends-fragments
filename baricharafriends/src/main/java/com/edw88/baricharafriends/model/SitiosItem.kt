@@ -13,7 +13,7 @@ data class SitiosItem(
     @SerializedName("urlFoto")
     val urlFoto: String,
     @SerializedName("descripcionLarga")
-    val descripcionlarga : String,
+    val descripcionLarga : String,
     @SerializedName("latitud")
     val latitud : Double,
     @SerializedName("longitud")
