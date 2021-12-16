@@ -38,8 +38,6 @@ class MapsFragment : Fragment() {
             .title(sitio.nombre)
                 .snippet("Calificación " + sitio.calificacion))
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(posSitio,17F))
-
-
     }
 
     override fun onCreateView(

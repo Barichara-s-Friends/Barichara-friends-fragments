@@ -157,7 +157,7 @@
                         android:minWidth="48dp"
                         android:minHeight="48dp"
                         android:src="@drawable/ic_baseline_maps_ugc_24"
-                        android:tint="@color/ic_launcher_background"
+                        android:tint="@android:color/transparent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"

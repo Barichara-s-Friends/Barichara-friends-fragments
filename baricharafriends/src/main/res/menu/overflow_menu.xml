@@ -4,5 +4,6 @@
 
     <item
         android:id="@+id/menu_preferences"
+        android:icon="@drawable/ic_configuration_foreground"
         android:title="@string/preferences" />
 </menu>
