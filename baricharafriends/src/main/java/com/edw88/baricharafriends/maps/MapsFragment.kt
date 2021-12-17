@@ -32,6 +32,8 @@ class MapsFragment : Fragment() {
         val sitio = args.sitio
 
         val posSitio = LatLng(sitio.latitud, sitio.longitud)
+
+
         googleMap.addMarker(
             MarkerOptions()
             .position(posSitio)

@@ -10,9 +10,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         app:cardBackgroundColor="@color/segundo"
         app:cardCornerRadius="16dp"
@@ -25,8 +23,8 @@
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="@color/black"
             android:backgroundTint="@color/primero"
             android:backgroundTintMode="multiply">
@@ -92,8 +90,9 @@
                 android:foregroundTint="@color/purple_500"
                 android:indeterminateTint="@color/purple_500"
                 android:progressBackgroundTint="@color/common_google_signin_btn_text_light_disabled"
+                android:progressBackgroundTintMode="src_in"
                 android:progressTint="@color/primero"
-                android:rating="4.8"
+                android:rating="4.2"
                 android:secondaryProgressTint="@color/tercero"
                 android:stepSize="0.1"
                 app:layout_constraintBottom_toBottomOf="parent"

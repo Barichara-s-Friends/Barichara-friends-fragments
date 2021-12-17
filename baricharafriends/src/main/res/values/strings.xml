@@ -60,6 +60,9 @@ El camino se hizo con losas de piedra plana muy abundante en la región, y comie
     <string name="menu_slideshow">Slideshow</string>
     <string name="preferences">Preferencias</string>
     <string name="todo">TODO</string>
+    <string name="messaje_inicial">Para una mejor experiencia de usuario, favor  seleccionar el modo oscuro y para mejores detalles gire su dispositivo!</string>
+    <string name="ATENCION">ATENCION!</string>
+    <string name="text_view_messaje_atencion">ATENCIÓN!</string>
 
 
 </resources>

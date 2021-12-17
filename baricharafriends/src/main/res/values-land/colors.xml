@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="NEGRO">#00000000</color>
+    <color name="black_message_land_night">#000000</color>
+    <color name="white_message_land_night">#FFFFFF</color>
+</resources>

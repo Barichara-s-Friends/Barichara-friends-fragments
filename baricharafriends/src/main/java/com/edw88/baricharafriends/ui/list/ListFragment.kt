@@ -42,7 +42,8 @@ class ListFragment : Fragment() {
 //        listViewModel.loadMockJson(context?.assets?.open("poi.json"))
 
         listViewModel.getSitiosFromServer()
-        listBinding.progressBar.visibility = View.VISIBLE
+        listBinding.cardView.visibility = View.INVISIBLE
+        listBinding.cardViewMessaje?.visibility = View.VISIBLE
 
         listViewModel.onListpoiLoaded.observe(viewLifecycleOwner,{ result ->
             onListpoiLoadedSubscribe(result)
@@ -61,7 +62,8 @@ class ListFragment : Fragment() {
     private fun onListpoiLoadedSubscribe(result: ArrayList<SitiosItem>?) {
         result?.let { listPoi ->
             poiAdapter.appendItems(listPoi)
-            listBinding.progressBar.visibility = View.INVISIBLE
+            listBinding.cardView.visibility = View.VISIBLE
+            listBinding.cardViewMessaje?.visibility = View.INVISIBLE
             /*
             this.listPoi = listPoi
             poiAdapter.notifyDataSetChanged()*/
