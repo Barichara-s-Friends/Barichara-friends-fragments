@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text_view_messaje_atencion">ATENCIÓN!</string>
+    <string name="text_view_message_dark_land">Estamos cargando la información</string>
+    <string name="message_land_night">Espere por favor, estamos cargando la información...</string>
+    <string name="message_night_portrait">Para una mejor experiencia de usuario, favor girar su dispositivo!</string>
+    <string name="message_title_land_night">GRACIAS!</string>
+</resources>
